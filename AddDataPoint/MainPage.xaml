@@ -12,11 +12,11 @@
     <chart:SfCartesianChart>
        
         <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis RangePadding="Additional" Interval="0.5"/>
+            <chart:NumericalAxis RangePadding="Additional" Interval="1" PlotOffsetEnd="20"/>
         </chart:SfCartesianChart.XAxes>
 
         <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis RangePadding="Additional" ShowMajorGridLines="False" Interval="0.5"/>
+            <chart:NumericalAxis RangePadding="Additional" ShowMajorGridLines="False" Interval="1"/>
         </chart:SfCartesianChart.YAxes>
 
         <chart:SfCartesianChart.Series>
