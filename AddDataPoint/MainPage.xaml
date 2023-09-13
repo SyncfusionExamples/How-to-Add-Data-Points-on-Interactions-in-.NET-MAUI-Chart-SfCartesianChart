@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AddDataPoint.MainPage"
+             xmlns:model="clr-namespace:AddDataPoint">
+
+    <ContentPage.BindingContext>
+        <model:ViewModel x:Name="ViewModelName"></model:ViewModel>
+    </ContentPage.BindingContext>
+
+    <chart:SfCartesianChart>
+       
+        <chart:SfCartesianChart.XAxes>
+            <chart:NumericalAxis RangePadding="Additional" Interval="1" PlotOffsetEnd="20"/>
+        </chart:SfCartesianChart.XAxes>
+
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis RangePadding="Additional" ShowMajorGridLines="False" Interval="1"/>
+        </chart:SfCartesianChart.YAxes>
+
+        <chart:SfCartesianChart.Series>
+            <chart:SplineSeries ItemsSource="{Binding Data}" XBindingPath="Value" YBindingPath="Size" ShowMarkers="True">
+                <chart:SplineSeries.MarkerSettings>
+                    <chart:ChartMarkerSettings  Width="8" Height="8" Fill="white" Stroke="#314A6E" StrokeWidth="1"/>
+                </chart:SplineSeries.MarkerSettings>
+            </chart:SplineSeries>
+        </chart:SfCartesianChart.Series>
+        
+        <chart:SfCartesianChart.InteractiveBehavior>
+            <model:ChartInteractionExt/>
+        </chart:SfCartesianChart.InteractiveBehavior>
+        
+    </chart:SfCartesianChart>
+
+</ContentPage>
